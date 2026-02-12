@@ -1,0 +1,11 @@
+{
+  "files": [],
+  "compilerOptions": {
+    "types": ["youtube"],
+    "lib": ["DOM", "ESNext"]
+  },
+  "references": [
+    { "path": "./tsconfig.app.json" },
+    { "path": "./tsconfig.node.json" }
+  ]
+}

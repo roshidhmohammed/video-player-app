@@ -1,8 +1,8 @@
 import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
-import HomePage from './features/feed/HomePage';
+import HomePage from './features/feed/components/HomePage';
 // import VideoPlayer from './features/player/VideoPlayer';
 import { AnimatePresence } from 'framer-motion';
-import DetailedVideoPage from './features/player/DetailedVideoPage';
+import DetailedVideoPage from './features/player/components/DetailedVideoPage';
 // import MiniPlayer from './features/global/miniPlayer';
 
 function AnimatedRoutes() {

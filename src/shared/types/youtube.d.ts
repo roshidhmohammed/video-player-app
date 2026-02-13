@@ -7,6 +7,7 @@ declare global {
       pauseVideo(): void;
       stopVideo(): void;
       getPlayerState(): number;
+      seekTo(seconds: number, allowSeekAhead?: boolean): void;
       getDuration(): number;
       getCurrentTime(): number;
       destroy(): void;

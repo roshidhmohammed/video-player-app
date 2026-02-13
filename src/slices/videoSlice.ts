@@ -1,5 +1,6 @@
 import { createSlice, type PayloadAction } from '@reduxjs/toolkit';
-import type { CategoryData } from '../types';
+import type { CategoryData } from '../shared/types';
+
 
 interface VideoState {
     suggestionVideos: CategoryData[];

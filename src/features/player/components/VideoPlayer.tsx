@@ -11,7 +11,7 @@ import RelatedDrawer from "./suggestionVideo/RelatedDrawer";
 import SkipOverlay from "./controls/SkipOverlay";
 
 import useVideoPlayer from "../hooks/useVideoPlayer";
-import { handleSkipHelper } from "../../../helpers/player/handleSkip";
+import { handleSkipHelper } from "../services/handleSkip";
 
 import { usePlaybackControls } from "../hooks/usePlaybackControls";
 import { useMinimizePlayer } from "../hooks/useMinimizePlayer";

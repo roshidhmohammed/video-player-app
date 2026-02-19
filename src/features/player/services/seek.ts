@@ -1,7 +1,9 @@
+import type { RefObject } from "react";
+
 export const handleSeekMouseUp = (
   e: React.MouseEvent<HTMLInputElement>,
-  playerRef: React.RefObject<any>,
-  setSeeking: (value: boolean) => void
+  playerRef: RefObject<YT.Player | null | HTMLVideoElement>,
+  setSeeking: (value: boolean) => void,
 ) => {
   setSeeking(false);
 

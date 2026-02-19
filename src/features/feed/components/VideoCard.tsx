@@ -1,18 +1,22 @@
-import React from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import type { VideoCardProps } from "../types/feed.types";
 import { useDispatch, useSelector } from "react-redux";
 import type { RootState } from "../../../app/store";
 import { removeActiveVideo, updateCurrentTime, updateIsMinimized } from "../../player/state/player.slice";
+import clsx from "clsx";
 
 
 const VideoCard: React.FC<VideoCardProps> = ({ video, categoryName }) => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
+  const [loaded, setLoaded] = useState(false);
   const isMinimized = useSelector(
     (state: RootState) => state.player.isMinimized,
   );
+
+  
 
   const viewDetailedVideo = (slug: string) => {
     if (isMinimized) {
@@ -26,7 +30,7 @@ const VideoCard: React.FC<VideoCardProps> = ({ video, categoryName }) => {
   return (
     <motion.div
       layoutId={`video-container-${video.slug}`}
-      className="group cursor-pointer flex flex-col gap-2"
+      className="group cursor-pointer flex flex-col gap-2 min-h-80"
       onClick={() => viewDetailedVideo(video.slug)}
       whileHover={{ scale: 1.02 }}
       transition={{ type: "spring", stiffness: 300, damping: 20 }}
@@ -37,8 +41,13 @@ const VideoCard: React.FC<VideoCardProps> = ({ video, categoryName }) => {
           layoutId={`thumbnail-${video.slug}`}
           src={video.thumbnailUrl}
           alt={video.title}
-          loading="lazy"
-          // className="w-full h-auto block"
+          loading={"eager"}
+          
+          onLoad={() => setLoaded(true)}
+  className={clsx(
+    "transition-opacity duration-500 w-full h-auto block",
+    loaded ? "opacity-100 " : "opacity-20 h-auto"
+  )}
         />
 
         {/* Gradient Overlay */}

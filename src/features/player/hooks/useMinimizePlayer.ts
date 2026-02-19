@@ -1,11 +1,17 @@
 import { useCallback } from "react";
+
+// redux
 import { useDispatch } from "react-redux";
-import { useNavigate } from "react-router-dom";
 import {
   updateActiveVideo,
   updateCurrentTime,
   updateIsMinimized,
 } from "../state/player.slice";
+
+// react navigation library
+import { useNavigate } from "react-router-dom";
+
+// types
 import type { VideoContent } from "../../../shared/types";
 
 export const useMinimizePlayer = (duration: number, played: number) => {

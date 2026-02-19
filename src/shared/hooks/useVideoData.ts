@@ -1,8 +1,13 @@
 import { useEffect, useMemo } from "react";
+
+// router-dom - navigation
 import { useParams } from "react-router-dom";
+
+// redux
 import { useDispatch } from "react-redux";
+
+// mock data for video card or feed
 import { videoData } from "../constants/Data";
-// import { setSelectedCategory } from "../slices/categorySlice";
 
 export const useVideoData = () => {
   const { id } = useParams<{ id: string }>();
@@ -10,19 +15,17 @@ export const useVideoData = () => {
 
   const video = useMemo(() => {
     return videoData.categories
-      .flatMap(c => c.contents)
-      .find(v => v.slug === id);
+      .flatMap((c) => c.contents)
+      .find((v) => v.slug === id);
   }, [id]);
 
   const category = useMemo(() => {
-    return videoData.categories.find(c => c.contents.some(v => v.slug === id))?.category.name;
+    return videoData.categories.find((c) =>
+      c.contents.some((v) => v.slug === id),
+    )?.category.name;
   }, [id]);
 
-  useEffect(() => {
-    if (category) {
-      // dispatch(setSelectedCategory(category));
-    }
-  }, [category, dispatch]);
+  useEffect(() => {}, [category, dispatch]);
 
   return { video, id };
 };

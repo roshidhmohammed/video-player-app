@@ -1,6 +1,12 @@
 import React from "react";
+
+// animations Library
 import { motion } from "framer-motion";
+
+// icons
 import { IoPlay, IoPause, IoPlayBack, IoPlayForward } from "react-icons/io5";
+
+// types
 import type { CenterControlsProps } from "../../types/player.types";
 
 const CenterControls: React.FC<CenterControlsProps> = ({

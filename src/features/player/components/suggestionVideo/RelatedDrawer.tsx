@@ -1,7 +1,15 @@
 import React from "react";
+
+// animation library
 import { motion } from "framer-motion";
+
+// icons
 import { IoClose } from "react-icons/io5";
+
+// components
 import SuggestionVideo from "./SuggestionVideo";
+
+// types
 import type { RelatedDrawerProps } from "../../types/player.types";
 
 const RelatedDrawer: React.FC<RelatedDrawerProps> = ({ isOpen, onClose }) => {

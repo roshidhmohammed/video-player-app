@@ -1,6 +1,6 @@
 import type { CategoryData, VideoContent } from "../../../shared/types";
 
-export interface VideoFeedProps {
+export default interface VideoFeedProps {
   data: CategoryData[] | undefined;
   compact?: boolean;
 }

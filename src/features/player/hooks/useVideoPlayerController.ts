@@ -1,6 +1,10 @@
 import { useRef, useState } from "react";
+
+// redux and state stores
 import { useSelector } from "react-redux";
 import type { RootState } from "../../../app/store";
+
+// custom hooks
 import { useVideoData } from "../../../shared/hooks/useVideoData";
 import useVideoPlayer from "./useVideoPlayer";
 import { usePlayerControls } from "./usePlayerControls";
@@ -12,7 +16,7 @@ export const useVideoPlayerController = () => {
   const intervalRef = useRef<number | null>(null);
 
   const currentTime = useSelector(
-    (state: RootState) => state.player.currentTime
+    (state: RootState) => state.player.currentTime,
   );
 
   const { video, id } = useVideoData();
@@ -32,7 +36,7 @@ export const useVideoPlayerController = () => {
   const { togglePlayPause } = usePlaybackControls(
     playerRef,
     playing,
-    setPlaying
+    setPlaying,
   );
 
   const { minimize } = useMinimizePlayer(duration, played);
@@ -44,7 +48,7 @@ export const useVideoPlayerController = () => {
     setDuration,
     intervalRef,
     handleTimeUpdate,
-    "mini-youtube-player"
+    "mini-youtube-player",
   );
 
   return {

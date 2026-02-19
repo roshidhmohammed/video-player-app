@@ -1,6 +1,12 @@
 import React from "react";
+
+// components
 import VideoCard from "./VideoCard";
-import type { VideoFeedProps } from "../types/feed.types";
+
+// types
+import type VideoFeedProps from "../types/feed.types";
+
+// framer motion
 import { motion } from "framer-motion";
 
 const container = {
@@ -30,7 +36,11 @@ const VideoFeed: React.FC<VideoFeedProps> = ({ data }) => {
         {data.flatMap((section) =>
           section.contents.map((video) => (
             <motion.div key={video.slug} variants={item}>
-              <VideoCard video={video} categoryName={section.category.name} />
+              <VideoCard
+                video={video}
+                categoryName={section.category.name}
+                // isLazy={index < 10 ? false : true}
+              />
             </motion.div>
           )),
         )}

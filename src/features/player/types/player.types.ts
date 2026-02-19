@@ -19,24 +19,23 @@ export interface BottomControlsProps {
 }
 
 export interface CenterControlsProps {
-    playing: boolean;
-    showControls: boolean;
-    onPlayPause: (e: React.MouseEvent) => void;
-    onSkip: (e: React.MouseEvent, seconds: number) => void;
+  playing: boolean;
+  showControls: boolean;
+  onPlayPause: (e: React.MouseEvent) => void;
+  onSkip: (e: React.MouseEvent, seconds: number) => void;
 }
 
 export interface RelatedDrawerProps {
-    isOpen: boolean;
-    onClose: () => void;
+  isOpen: boolean;
+  onClose: () => void;
 }
 
 export interface SkipOverlayProps {
-    skipAnimation: { direction: 'back' | 'forward'; timestamp: number } | null;
+  skipAnimation: { direction: "back" | "forward"; timestamp: number } | null;
 }
 
 export interface TopControlsProps {
-    showControls: boolean;
-    title: string;
-    onClose: () => void;
+  showControls: boolean;
+  title: string;
+  onClose: () => void;
 }
-

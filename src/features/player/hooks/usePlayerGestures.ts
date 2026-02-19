@@ -3,14 +3,14 @@ import { useEffect } from "react";
 export const usePlayerGestures = (
   isDrawerOpen: boolean,
   setIsDrawerOpen: (open: boolean) => void,
-  containerRef: React.RefObject<HTMLDivElement | null>
+  containerRef: React.RefObject<HTMLDivElement | null>,
 ) => {
   useEffect(() => {
     const handleWheel = (e: WheelEvent) => {
       if (!isDrawerOpen && e.deltaY > 50) {
         setIsDrawerOpen(true);
       } else if (isDrawerOpen && e.deltaY < -50) {
-        const drawerContent = document.querySelector('.custom-scrollbar');
+        const drawerContent = document.querySelector(".custom-scrollbar");
         if (drawerContent && drawerContent.scrollTop === 0) {
           setIsDrawerOpen(false);
         }
@@ -27,7 +27,7 @@ export const usePlayerGestures = (
       if (!isDrawerOpen && touchStart - touchEnd > 100) {
         setIsDrawerOpen(true);
       } else if (isDrawerOpen && touchEnd - touchStart > 100) {
-        const drawerContent = document.querySelector('.custom-scrollbar');
+        const drawerContent = document.querySelector(".custom-scrollbar");
         if (drawerContent && drawerContent.scrollTop === 0) {
           setIsDrawerOpen(false);
         }
@@ -36,16 +36,16 @@ export const usePlayerGestures = (
 
     const container = containerRef.current;
     if (container) {
-      container.addEventListener('wheel', handleWheel);
-      container.addEventListener('touchstart', handleTouchStart);
-      container.addEventListener('touchend', handleTouchEnd);
+      container.addEventListener("wheel", handleWheel);
+      container.addEventListener("touchstart", handleTouchStart);
+      container.addEventListener("touchend", handleTouchEnd);
     }
 
     return () => {
       if (container) {
-        container.removeEventListener('wheel', handleWheel);
-        container.removeEventListener('touchstart', handleTouchStart);
-        container.removeEventListener('touchend', handleTouchEnd);
+        container.removeEventListener("wheel", handleWheel);
+        container.removeEventListener("touchstart", handleTouchStart);
+        container.removeEventListener("touchend", handleTouchEnd);
       }
     };
   }, [isDrawerOpen, setIsDrawerOpen, containerRef]);

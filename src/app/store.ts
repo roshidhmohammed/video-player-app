@@ -1,6 +1,6 @@
 import { configureStore } from '@reduxjs/toolkit';
-import videoReducer from '../slices/videoSlice';
-import categoryReducer from '../slices/categorySlice';
+import videoReducer from '../shared/slices/video.slice';
+import categoryReducer from '../shared/slices/category.slice';
 import  playerReducer  from '../features/player/state/player.slice';
 
 // import playerReducer from '../slices/videoPlayerSlice';

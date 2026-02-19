@@ -1,7 +1,7 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useState } from "react";
 
 const useModalBehavior = (onClose: () => void) => {
-    const [isOpen, setIsOpen] = useState(true);
+  const [isOpen, setIsOpen] = useState(true);
 
   const closeModal = () => {
     setIsOpen(false);
@@ -18,7 +18,7 @@ const useModalBehavior = (onClose: () => void) => {
     document.body.style.overflow = isOpen ? "hidden" : "auto";
   }, [isOpen]);
 
-   return { isOpen, closeModal };
-}
+  return { isOpen, closeModal };
+};
 
-export default useModalBehavior
+export default useModalBehavior;

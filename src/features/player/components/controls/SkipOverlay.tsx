@@ -1,6 +1,12 @@
 import React from "react";
+
+// Animation library
 import { motion, AnimatePresence } from "framer-motion";
+
+// icons
 import { IoPlayBack, IoPlayForward } from "react-icons/io5";
+
+// types
 import type { SkipOverlayProps } from "../../types/player.types";
 
 const SkipOverlay: React.FC<SkipOverlayProps> = ({ skipAnimation }) => {

@@ -1,15 +1,21 @@
 import { useRef, useState } from "react";
+
+// redux ans state stores
 import { useSelector } from "react-redux";
 import type { RootState } from "../../../app/store";
+
+// custom-hooks
 import { usePlayerControls } from "../hooks/usePlayerControls";
-import { IoClose, IoPause, IoPlay } from "react-icons/io5";
-import { motion } from "framer-motion";
-
-
-import { MdFullscreen } from "react-icons/md";
 import useVideoPlayer from "../hooks/useVideoPlayer";
 import { usePlaybackControls } from "../hooks/usePlaybackControls";
 import { useMinimizePlayer } from "../hooks/useMinimizePlayer";
+
+// icons
+import { IoClose, IoPause, IoPlay } from "react-icons/io5";
+import { MdFullscreen } from "react-icons/md";
+
+// animation library
+import { motion } from "framer-motion";
 
 const MiniPlayer = () => {
   const selectedVideo = useSelector(
@@ -46,7 +52,7 @@ const MiniPlayer = () => {
   const { closePlayer } = useMinimizePlayer(0, 0);
 
   return (
-    <div className="absolute inset-0 z-0 bg-black group border border-gray-800/90  shadow-xl shadow-gray-400">
+    <div className="absolute right-8 bottom-5  h-60 md:h-full z-0 bg-black group border border-gray-800   shadow-xl  shadow-gray-800">
       <div
         id="mini-youtube-player"
         className="w-full h-full z-0  pointer-events-none"
@@ -58,7 +64,7 @@ const MiniPlayer = () => {
         animate={{ opacity: showControls ? 1 : 0 }}
         className="opacity-0
     group-hover:opacity-100
-    transition-opacity duration-500  absolute top-0 left-0 right-0 z-30 flex items-center justify-between px-4 py-3 bg-gradient-to-b from-black/70 to-transparent"
+    transition-opacity duration-500  absolute top-0 left-0 right-0 z-30 flex items-center justify-between  px-1 md:py-6 py-16 bg-gradient-to-b from-black/70 to-transparent"
       >
         <h2 className="text-white text-sm font-medium truncate">
           {selectedVideo?.title}

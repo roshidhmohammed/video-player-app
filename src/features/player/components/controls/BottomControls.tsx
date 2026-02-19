@@ -1,7 +1,15 @@
 import React from "react";
+
+// animations
 import { motion } from "framer-motion";
+
+// icons
 import { IoPause, IoPlay, IoChevronUp } from "react-icons/io5";
-import { formatTime } from "../../../../helpers/formatTime";
+
+// helpers
+import { formatTime } from "../../../../shared/services/formatTime";
+
+// types
 import type { BottomControlsProps } from "../../types/player.types";
 
 const BottomControls: React.FC<BottomControlsProps> = ({

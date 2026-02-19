@@ -4,7 +4,7 @@ import VideoFeed from "./VideoFeed";
 import CategoryFilter from "./CategoryFilter";
 import { videoData } from "../../../shared/constants/Data";
 import { motion, AnimatePresence } from "framer-motion";
-import { setSelectedCategory } from "../state/category.slice";
+import { setSelectedCategory } from "../../../shared/slices/category.slice";
 import type { RootState } from "../../../app/store";
 import MiniPlayer from "../../player/components/MiniPlayer";
 // import { MiniPlayer } from "@/features/player"

@@ -15,6 +15,7 @@ declare global {
 
     interface PlayerEvent {
       target: Player;
+      data: string
     }
   }
 

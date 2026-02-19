@@ -1,73 +1,75 @@
-# React + TypeScript + Vite
+# Video-player-App
+  A modern, mobile-first video player with draggable full-screen playback, mini-player (PiP), gestures, and smooth Framer Motion animations.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Instruction to set up the project locally
 
-Currently, two official plugins are available:
+  1. First, run the development server:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+git clone https://github.com/roshidhmohammed/
+cd Video-player-App
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+   2. Install all the dependencies used in this app using the below command:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm install
 ```
+
+   3. Start the project using the below command:
+
+```bash
+npm run dev
+```
+
+Open [http://localhost:5173](http://localhost:5173) with your browser to see the app.
+
+
+# Added features list
+
+1.  Displaying the scrollable list of videos grouped by category.
+2.  Video Cards with thumbnail, title, duration, and category badge.
+3.  Clicking a video opens it in a Full screen video player.
+4.  Implemented smooth transitions between the feed and the full screen player player view.
+5.  Video will autoplay upon opening.
+6.  Implemented play/pause toggle to pause/play the video.
+7.  Added Skip forward with (+10 seconds) and backward (-10 seconds).
+8.  Added Seekable progress bar.
+9.  Current time / total duration display.
+10. Fully responsive for both mobile and desktop.
+11. Swipe up or scroll down to reveal a related video list.
+12. Related videos only shows the videos from the same category.
+13. Clicking a video from the list will switch playback to the selected video immediately.
+14. Auto-play the new video.
+15. Updating the list if the category changes.
+16. Added smooth scrolling and fluid animations.
+17. Allowed users to drag the video player downward and The video shrinks and docks into a bottom mini-player (Picture-in-Picture style).
+18. Mini-Player with Small video preview (continues playing), Video title, Play / Pause control, Close button.
+19. The mini-player should persist while the user browses the home page.
+20. Tapping the mini-player must restore it to full-screen mode.
+
+21. Enhanced animations for the forward and backward skip buttons.
+
+
+# Technologies Used
+
+- React.js - Ui Library
+- TailwinCSS - CSS styling framework
+- Framer Motion - Animation library for drag, gestures, and transitions.
+- Redux Toolkit and React-Redux -  for managing the state across the application.
+- React-router-dom  -React Navigation library
+- React-Icons - React Icon Library
+
+# Deployment
+
+1. Vercel - Deployment Platform
+2. Deployed Link -
+```bash
+https://video-payer-app.vercel.app/
+```
+
+
+
+
+
+

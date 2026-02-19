@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import type { RootState } from "../../../app/store";
 import { useDispatch, useSelector } from "react-redux";
 import { videoData } from "../../../shared/constants/Data";
-import { selectedCategoryVideos } from "../../../slices/videoSlice";
+import { selectedCategoryVideos } from "../../../shared/slices/video.slice";
 
 const useSuggestionVideos = () => {
   const selectedCategory = useSelector(

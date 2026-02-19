@@ -1,6 +1,12 @@
 import React from "react";
+
+// Animation library
 import { motion } from "framer-motion";
+
+// icons
 import { IoArrowBack, IoClose } from "react-icons/io5";
+
+// types
 import type { TopControlsProps } from "../../types/player.types";
 
 const TopControls: React.FC<TopControlsProps> = ({

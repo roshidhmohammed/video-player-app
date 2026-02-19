@@ -10,7 +10,7 @@ type Props = {
   };
 };
 
- const VideoModal = ({ isOpen, onClose, video }: Props) => {
+const VideoModal = ({ isOpen, onClose, video }: Props) => {
   const toggleFullScreen = () => {
     const iframe = document.getElementById("yt-modal-player");
     if (!document.fullscreenElement && iframe) {
@@ -30,10 +30,7 @@ type Props = {
           className="fixed inset-0 z-50 bg-black/90 backdrop-blur-md flex items-center justify-center"
         >
           {/* Backdrop click */}
-          <div
-            className="absolute inset-0"
-            onClick={onClose}
-          />
+          <div className="absolute inset-0" onClick={onClose} />
 
           {/* Modal content */}
           <motion.div
@@ -75,4 +72,4 @@ type Props = {
   );
 };
 
-export default VideoModal
+export default VideoModal;

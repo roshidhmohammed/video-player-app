@@ -1,4 +1,6 @@
 import { useState, useEffect, useRef } from "react";
+
+// redux
 import { useDispatch } from "react-redux";
 import { updateCurrentTime } from "../state/player.slice";
 
@@ -11,10 +13,7 @@ export const usePlayerControls = (playing: boolean, id: string | undefined) => {
   const controlsTimeoutRef = useRef<number | null>(null);
 
   // Reset state on video change
-  useEffect(() => {
-    // setPlayed(0);
-  }, [id]);
-
+  useEffect(() => {}, [id]);
 
   // Auto-hide controls
   useEffect(() => {

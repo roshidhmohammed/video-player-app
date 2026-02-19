@@ -1,29 +1,29 @@
 # Video-player-App
-  A modern, mobile-first video player with draggable full-screen playback, mini-player (PiP), gestures, and smooth Framer Motion animations.
+
+A modern, mobile-first video player with draggable full-screen playback, mini-player (PiP), gestures, and smooth Framer Motion animations.
 
 # Instruction to set up the project locally
 
-  1. First, run the development server:
+1. First, run the development server:
 
 ```bash
-git clone https://github.com/roshidhmohammed/
-cd Video-player-App
+git clone https://github.com/roshidhmohammed/video-player-app.git
+cd video-player-app
 ```
 
-   2. Install all the dependencies used in this app using the below command:
+2.  Install all the dependencies used in this app using the below command:
 
 ```bash
 npm install
 ```
 
-   3. Start the project using the below command:
+3.  Start the project using the below command:
 
 ```bash
 npm run dev
 ```
 
 Open [http://localhost:5173](http://localhost:5173) with your browser to see the app.
-
 
 # Added features list
 
@@ -50,15 +50,14 @@ Open [http://localhost:5173](http://localhost:5173) with your browser to see the
 
 21. Enhanced animations for the forward and backward skip buttons.
 
-
 # Technologies Used
 
-- React.js - Ui Library
-- TailwinCSS - CSS styling framework
-- Framer Motion - Animation library for drag, gestures, and transitions.
-- Redux Toolkit and React-Redux -  for managing the state across the application.
-- React-router-dom  -React Navigation library
-- React-Icons - React Icon Library
+- **React.js** - Ui Library
+- **TailwindCSS** - CSS styling framework
+- **Framer Motion** - Animation library for drag, gestures, and transitions.
+- **Redux Toolkit and React-Redux** - for managing the state across the application.
+- **React-router-dom** -React Navigation library
+- **React-Icons** - React Icon Library
 
 # Deployment
 
@@ -67,9 +66,3 @@ Open [http://localhost:5173](http://localhost:5173) with your browser to see the
 ```bash
 https://video-payer-app.vercel.app/
 ```
-
-
-
-
-
-

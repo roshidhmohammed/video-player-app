@@ -66,3 +66,8 @@ Open [http://localhost:5173](http://localhost:5173) with your browser to see the
 ```bash
 https://video-payer-app.vercel.app/
 ```
+
+# Special Cases needed to mention
+
+1. The video card in the video feed page get slow, because the larger image size. That's reason, it takes lot of time to load the image on the browser.
+2. Solution for the image - Needed to render different image size for diffetent screen size to increase the image loading performance.

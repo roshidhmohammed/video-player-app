@@ -84,7 +84,7 @@ const MiniPlayer = () => {
         animate={{ opacity: showControls ? 1 : 0 }}
         className=" opacity-0
     group-hover:opacity-100
-    transition-opacity duration-500 absolute bottom-[30%] md:bottom-[35%] z-20 flex items-center justify-center min-w-full"
+    transition-opacity duration-500 absolute bottom-[20%] md:bottom-[35%] z-20 flex items-center justify-center min-w-full"
       >
         <button
           onClick={handleFullscreenMode}
